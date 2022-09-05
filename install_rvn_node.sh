@@ -1,4 +1,9 @@
 #!/bin/sh
+
+# Huge thanks to PapaChurbz for systemd configuration!
+# Install script written by Luckyblocks - pool operator of The #1 Zero Fee Ravencoin mining pool - https://ravenpool.ninja
+# support@ravenpool.ninja
+
 set -x
 echo "Installing Ravencoin Daemon...please wait..."
 sleep .2
