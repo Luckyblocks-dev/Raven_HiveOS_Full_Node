@@ -18,6 +18,10 @@ cecho(){
     printf "${!1}${2} ${NC}\n" # <-- bash
 }
 #### END COLOR SCRIPT
+cecho "CYAN" "Starting..."
+sleep 1.5
+cecho "YELLOW" "Huge thanks to @PapaChurbz for systemd configuration!"
+sleep 4
 cecho "CYAN" "Checking for updates..."
 sleep 3
 apt update
