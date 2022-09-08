@@ -18,6 +18,21 @@ cecho(){
     printf "${!1}${2} ${NC}\n" # <-- bash
 }
 #### END COLOR SCRIPT
+cecho "CYAN" "Checking for updates..."
+sleep 3
+apt update
+sleep 10
+cecho "CYAN" "Installing system updates..."
+apt upgrade -y
+sleep 15
+cecho "CYAN" "Removing install files..."
+sleep 3
+apt autoremove -y
+cecho "CYAN" "Completeing system updates..."
+selfupgrade
+sleep 12
+cecho "CYAN" "Moving onward with the installation..."
+sleep 3
 cecho "YELLOW" "Expanding the disk...please wait..."
 disk-expand
 sleep 5
@@ -30,7 +45,7 @@ mkdir -p /usr/bin/raven.d
 cd /tmp
 cecho "YELLOW" "Downloading the daemon..."
 sleep 1
-wget https://github.com/RavenProject/Ravencoin/releases/download/v4.6.1/raven-4.6.1-7864c39c2-x86_64-linux-gnu.tar.gz
+wget -q https://github.com/RavenProject/Ravencoin/releases/download/v4.6.1/raven-4.6.1-7864c39c2-x86_64-linux-gnu.tar.gz
 sleep 10
 cecho "YELLOW" "Unzipping and installing..."
 sleep 3
@@ -71,16 +86,18 @@ cecho "YELLOW" "Installation is complete!"
 sleep 2
 cecho "YELLOW" "Please review logs above for any errors!"
 sleep 1
-cecho "YELLOW" "Don't forget to open up your firewall/port forward 8767 !!!"
+cecho "YELLOW" "Don't forget to open up your firewall / port forward 8767 !"
 sleep 1
-cecho "YELLOW" "Printing your IP address, you NEED THIS FOR PORT FORWARDING"
+cecho "YELLOW" "Printing your IP address for port forwarding step..."
 ifconfig | grep -A 1 'wlan0'
 ifconfig | grep -A 1 'eth0'
-cecho "CYAN" "Copy your IP address, eg, 192.168.x.x from the above output"
+cecho "CYAN" "Copy your IP address it's the one after 'inet' "
 sleep .5
 cecho "CYAN" "To use in the next step for Port Forwarding"
 sleep .5
 cecho "CYAN" "Full directions at:"
 sleep .5
 cecho "GREEN" "https://bit.ly/RVN_Node"
-cecho "RED" "All finished! Exiting..."
+cecho "GREEN" "*********************************"
+cecho "CYAN" "     All finished! Exiting..."
+cecho "GREEN" "*********************************"
