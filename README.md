@@ -6,4 +6,4 @@ This is a "one-click" installation and configuration script for HiveOS Linux.
 
 The intention of this is to help support/strengthen the Ravencoin network. A lot of us have mining rigs that are running 24/7 and could be running a full node as well.
 
-Please see my [install guide on Medium](https://medium.com) for caveats, warnings, and detailed copy/paste setup.
+Please see my [install guide on Medium](https://medium.com/@Ravenpool.ninja/how-to-run-a-ravencoin-full-node-on-hiveos-linux-and-windows-fbfd8784bcc7) for caveats, warnings, and detailed copy/paste setup.
