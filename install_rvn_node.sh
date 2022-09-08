@@ -73,7 +73,7 @@ chown -R raven:raven /var/lib/ravend
 cecho "YELLOW" "Creating the systemd service for automatic start-up at boot"
 sleep 5
 cd /etc/systemd/system
-wget https://raw.githubusercontent.com/RavenProject/Ravencoin/master/contrib/init/ravend.service
+wget -q https://raw.githubusercontent.com/Luckyblocks-dev/Raven_HiveOS_Full_Node/main/ravend.service
 sleep 3
 cecho "YELLOW" "Enabling and starting the service"
 sleep 3
