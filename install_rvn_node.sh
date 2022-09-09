@@ -1,8 +1,10 @@
 #!/bin/bash
 
 # Huge thanks to PapaChurbz for systemd configuration!
+sleep 1
 # Install script written by Luckyblocks - pool operator of The #1 Zero Fee Ravencoin mining pool - https://ravenpool.ninja
 # support@ravenpool.ninja
+sleep 1.5
 
 #### COLOR SCRIPT - echo "YELLOW" OUTPUT COLOR TEXT
 cecho(){
@@ -18,6 +20,51 @@ cecho(){
     printf "${!1}${2} ${NC}\n" # <-- bash
 }
 #### END COLOR SCRIPT
+
+### PRINT RAVEN AND BANNER ###
+cecho "PURPLE" "                               WWX0Okddkkkxk0NW "
+cecho "PURPLE" "                             WN0kdddddd dxkkOKXXXXNWWW "
+cecho "PURPLE" "                           WXkolllloxk R xdxOOkkOkkkO0KXNW "
+cecho "PURPLE" "                           XokCccloodo A C2kcoodO000KXXNW "
+cecho "PURPLE" "                          WOllooolcck2 V 12kclox0NW "
+cecho "PURPLE" "                         W0doolcCkkCcl E oxxkkkxkXW "
+cecho "PURPLE" "                        WKxooolodxxxkk N kxxxxxxk0W "
+cecho "PURPLE" "                        N0kkkkOkkkkkkk P xxxxxxxxOXW "
+cecho "PURPLE" "                       WKkxdoddddxxxxx O xkkkkkkkkkKW "
+cecho "PURPLE" "                       Xdcoollllllllll O lloooddddxkKW "
+cecho "PURPLE" "                       0CCclolllllllll L lllllllllldodK "
+cecho "PURPLE" "                      Nd2kCClollllllll . lllllllllldc1COW " 
+cecho "PURPLE" "                      Kc12Ckklolllllll N lllllllllook12xW "
+cecho "PURPLE" "                     Wx211CC1koollllll I llllllllldl21lK "
+cecho "PURPLE" "                     Xl111kC21Coolllll N llllllllldc1kkW "
+cecho "PURPLE" "                    Wkk1112Ck11Coollll J llllllllooC1lX "
+cecho "PURPLE" "                    Xo11111CC111coolll A llllllllolkkOW "
+cecho "PURPLE" "                    OC11111kC2112coolll llllllldl2oX "
+cecho "PURPLE" "                   Nd2111112Ck1112cdolllllllllooCCOW "
+cecho "PURPLE" "                   Ok11111111112Ck11111111CdolloxK "
+cecho "PURPLE" "                   No211111111111CC111111112cdood0W "                                                                       
+cecho "PURPLE" "                   0C111111111111kC2111111112cddON "                                                                        
+cecho "PURPLE" "                  Nd21111111111112cckkkkkkkk2koOX "                                                                         
+cecho "PURPLE" "                 Kc111111111112cd0XKKKKKKKKKKXN "                                                                           
+cecho "PURPLE" "               2111111112CoONW "                                                                                            
+cecho "PURPLE" "               Xl1111112kokXWM "                                                                                            
+cecho "PURPLE" "              WOk1111klkK "                                                                                                 
+cecho "PURPLE" "             Xo112cx0N "                                                                                                    
+cecho "PURPLE" "            0cCd0N "                                                                                                        
+cecho "PURPLE" "            WOxK "
+
+cecho "CYAN" "**************************************************************************** "                                                
+cecho "CYAN" "  ____                                         _         _        _       "                                                   
+cecho "CYAN" " |  _ \ __ ___   _____ _ __  _ __   ___   ___ | |  _ __ (_)_ __  (_) __ _  "                                                  
+cecho "CYAN" " | |_) / _: \ \ / / _ \ :_ \| :_ \ / _ \ / _ \| | | :_ \| | |_ \ | |/ _- | "                                                  
+cecho "CYAN" " |  _ < (_| |\ V /  __/ | | | |_) | (_) | (_) | |_| | | | | | | || | (_| | "                                                  
+cecho "CYAN" " |_| \_\__-_| \_/ \___|_| |_| .__/ \___/ \___/|_(_)_| |_|_|_| |_|/ |\__-_| "                                                  
+cecho "CYAN" "                            |_|                                |__/        "                                                  
+cecho "CYAN" "**************************************************************************** "                                                
+cecho "YELLOW" "This Feature is brought to you by Ravenpool.ninja - the original Zero-Fee RVN Mining Pool!"                                 
+sleep 8
+### END PRINT RAVEN AND BANNER ###
+
 cecho "CYAN" "Starting..."
 sleep 1.5
 cecho "YELLOW" "Huge thanks to @PapaChurbz for systemd configuration!"
@@ -40,6 +87,23 @@ sleep 3
 cecho "YELLOW" "Expanding the disk...please wait..."
 disk-expand
 sleep 5
+cecho "YELLOW" "Checking your available disk space now..."
+sleep 5
+
+reqSpace=380000000
+
+availSpace=$(df "$HOME" | awk 'NR==2 { print $4 }')
+
+if (( availSpace < reqSpace )); then
+
+  cecho "RED" "You do not have enough disk space, exiting..." >&2
+
+  exit 1
+
+fi
+
+cecho "CYAN" "Available disk space looks good, continuing with install..."
+sleep 7
 cecho "YELLOW" "Installing Ravencoin Daemon...please wait..."
 sleep 4
 cecho "YELLOW" "Creating a raven user and group..."
