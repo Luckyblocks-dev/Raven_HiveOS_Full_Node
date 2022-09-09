@@ -22,6 +22,15 @@ cecho(){
 }
 #### END COLOR SCRIPT
 
+cecho "CYAN" "**************************************************************************** "                                                
+cecho "CYAN" "  ____                                         _         _        _       "                                                   
+cecho "CYAN" " |  _ \ __ ___   _____ _ __  _ __   ___   ___ | |  _ __ (_)_ __  (_) __ _  "                                                  
+cecho "CYAN" " | |_) / _: \ \ / / _ \ :_ \| :_ \ / _ \ / _ \| | | :_ \| | |_ \ | |/ _- | "                                                  
+cecho "CYAN" " |  _ < (_| |\ V /  __/ | | | |_) | (_) | (_) | |_| | | | | | | || | (_| | "                                                  
+cecho "CYAN" " |_| \_\__-_| \_/ \___|_| |_| .__/ \___/ \___/|_(_)_| |_|_|_| |_|/ |\__-_| "                                                  
+cecho "CYAN" "                            |_|                                |__/        "                                                  
+cecho "CYAN" "**************************************************************************** "                                                
+cecho "YELLOW" "This Feature is brought to you by Ravenpool.ninja - the original Zero-Fee RVN Mining Pool!"  
 ### PRINT RAVEN AND BANNER ###
 cecho "PURPLE" "                               WWX0Okddkkkxk0NW "
 cecho "PURPLE" "                             WN0kdddddd dxkkOKXXXXNWWW "
