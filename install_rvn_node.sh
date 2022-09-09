@@ -12,7 +12,8 @@ cecho(){
     GREEN="\033[0;32m"  # <-- [0 means not bold
     YELLOW="\033[1;33m" # <-- [1 means bold
     CYAN="\033[1;36m"
-    # ...Maybe I add more colors
+    PURPLE="\033[0;35m"
+    
 
     NC="\033[0m" # No Color
 
