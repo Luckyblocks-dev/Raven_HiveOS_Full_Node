@@ -91,7 +91,7 @@ sleep 5
 cecho "YELLOW" "Checking your available disk space now..."
 sleep 5
 
-reqSpace=380000000
+reqSpace=38000000
 
 availSpace=$(df "$HOME" | awk 'NR==2 { print $4 }')
 
