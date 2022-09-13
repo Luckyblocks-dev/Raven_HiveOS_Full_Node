@@ -86,28 +86,13 @@ sleep 8
 
 cecho "CYAN" "Starting..."
 sleep 1.5
-cecho "YELLOW" "Huge thanks to @PapaChurbz for systemd configuration!"
+cecho "YELLOW" "Huge thanks to PapaChurbz for systemd configuration!"
 sleep 4
-cecho "CYAN" "Checking for updates..."
-sleep 3
-apt update
-sleep 10
-cecho "CYAN" "Installing system updates..."
-apt upgrade -y
-sleep 15
-cecho "CYAN" "Removing install files..."
-sleep 3
-apt autoremove -y
-cecho "CYAN" "Completeing system updates..."
-selfupgrade
-sleep 12
-cecho "CYAN" "Moving onward with the installation..."
-sleep 3
 cecho "YELLOW" "Expanding the disk...please wait..."
 disk-expand
-sleep 5
+sleep 3
 cecho "YELLOW" "Checking your available disk space now..."
-sleep 5
+sleep 4
 
 reqSpace=38000000
 
@@ -122,9 +107,7 @@ if (( availSpace < reqSpace )); then
 fi
 
 cecho "CYAN" "Available disk space looks good, continuing with install..."
-sleep 7
-cecho "YELLOW" "Installing Ravencoin Daemon...please wait..."
-sleep 4
+sleep 5
 cecho "YELLOW" "Creating a raven user and group..."
 sleep 3
 adduser raven --system --group
@@ -133,7 +116,7 @@ cd /tmp
 cecho "YELLOW" "Downloading the daemon..."
 sleep 1
 wget -q https://github.com/RavenProject/Ravencoin/releases/download/v4.6.1/raven-4.6.1-7864c39c2-x86_64-linux-gnu.tar.gz
-sleep 10
+sleep 5
 cecho "YELLOW" "Unzipping and installing..."
 sleep 3
 tar -xf raven-4.6.1-7864c39c2-x86_64-linux-gnu.tar.gz
